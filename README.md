@@ -4,3 +4,5 @@ yash
 
 ![Great Learning Certificate](https://raw.githubusercontent.com/Yashavanthakumara/5186473_Yashavanthakumara-H-O/main/SDLC/SDLC_certificates/Great-Learning-Certification_2.jpg)
 
+[📄 View SimpliLearn Git Certificate (PDF)](https://raw.githubusercontent.com/Yashavanthakumara/5186473_Yashavanthakumara-H-O/main/git_certificate/5186473_Simpli_Lern.pdf)
+
