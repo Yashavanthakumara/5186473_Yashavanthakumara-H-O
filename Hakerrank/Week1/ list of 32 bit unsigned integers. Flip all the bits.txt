@@ -1,0 +1,15 @@
+//You will be given a list of 32 bit unsigned integers. Flip all the bits ( and ) and return the result as an unsigned integer.
+
+#include<stdio.h>
+int main(){
+    int q;
+    scanf("%d",&q);
+   for(int i=0; i<q;i++){
+    unsigned int n;
+    scanf("%u",&n);
+    unsigned int res =~n &0xFFFFFFFF;
+    printf("%u\n",res);
+   }
+   
+   return 0;
+}
