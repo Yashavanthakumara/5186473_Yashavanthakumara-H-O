@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <string.h>
+
+int main(void) {
+    char s[105], t[105];
+    scanf("%s", s);
+    scanf("%s", t);
+
+    int n = strlen(s);
+    char ans[105];
+
+    for (int i = 0; i < n; i++) {
+        ans[i] = (s[i] == t[i]) ? '0' : '1';
+    }
+    ans[n] = '\0';
+
+    // Print exactly, no newline or spaces
+    printf("%s", ans);
+
+    return 0;
+}
