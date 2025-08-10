@@ -1,0 +1,44 @@
+#include <stdio.h>
+
+int main() {
+    int n, k;
+    scanf("%d %d", &n, &k);
+
+    int arr[n];
+    for(int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+
+    
+    for(int i = 0; i < n-1; i++) {
+        for(int j = 0; j < n-1-i; j++) {
+            if(arr[j] > arr[j+1]) {
+                int temp = arr[j];
+                arr[j] = arr[j+1];
+                arr[j+1] = temp;
+            }
+        }
+    }
+
+    /*int min_unfairness = arr[k-1] - arr[0];
+    for(int i = 1; i <= n - k; i++) {
+        int diff = arr[i + k - 1] - arr[i];
+        if(diff < min_unfairness) {
+            min_unfairness = diff;
+        }
+    }*/
+    
+    int max[k],min[k];
+    for(int i=0;i<k;i++)
+    {
+        max[i]=arr[i];
+    }
+    for (int i=0; i<k;i++) {
+        min[i]=arr[i];
+    }
+    int ans=max[k-1]-min[0];
+
+    printf("%d\n", ans);
+
+    return 0;
+}

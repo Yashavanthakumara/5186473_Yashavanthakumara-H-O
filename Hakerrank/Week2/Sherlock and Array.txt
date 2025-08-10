@@ -1,0 +1,36 @@
+#include<stdio.h>
+int main(){
+    int t;
+    if(scanf("%d", &t) !=1)return 0;
+    while (t--) {
+    
+    
+    int n,flag=0;
+    scanf("%d", &n);
+    int a[n];
+    long long totasum=0,leftsum=0,rightsum;
+    for(int i=0; i<n; i++)
+    {
+        scanf("%d",&a[i]);
+        totasum +=a[i];
+    }
+
+    for(int i=0; i<n; i++)
+    {
+        rightsum = totasum-leftsum-a[i];
+        if(leftsum==rightsum)
+        {
+            flag=1;
+            break;
+        }
+        leftsum +=a[i];
+    }
+    if(flag){
+        printf("YES\n");
+    }
+    else {
+    printf("NO\n");
+    }
+    }
+    return 0;
+}

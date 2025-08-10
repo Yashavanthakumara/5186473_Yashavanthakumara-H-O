@@ -1,0 +1,10 @@
+#include <stdio.h>
+int main(){
+    int n, p;
+    scanf("%d %d", &n, &p);
+    int F_P =p / 2;
+    int B_P =(n/2)-(p/2);
+    int ans = (F_P<B_P)?F_P:B_P;
+    printf("%d", ans); 
+    return 0;
+}

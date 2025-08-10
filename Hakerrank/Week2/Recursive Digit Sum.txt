@@ -1,0 +1,24 @@
+# include<stdio.h>
+#include <string.h>
+int main(){
+    long long sum=0;
+    char n[10000000];
+    int k;
+    scanf("%s %d",n,&k);
+    
+    for(int i=0; i<strlen(n);i++){
+        sum +=n[i]-'0';
+    }
+    sum*=k;
+    while (sum>9) {
+        long long temp_sum=0;
+        while (sum>0) {
+            temp_sum +=sum%10;
+            sum /=10;
+        }
+        sum =temp_sum;
+    
+    }
+    printf("%d\n", sum);
+    return 0;
+}
